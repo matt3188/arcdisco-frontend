@@ -43,7 +43,7 @@ export default {
     [
       'nuxt-env',
       {
-        keys: ['API_ROUTE'],
+        keys: [{ key: 'API_ROUTE', secret: true }],
       },
     ],
   ],
