@@ -40,18 +40,13 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    [
-      'nuxt-env',
-      {
-        keys: [{ key: 'API_ROUTE', secret: true }],
-      },
-    ],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: this.$env.API_ROUTE,
+    // eslint-disable-next-line no-undef
+    baseURL: process.env.API_ROUTE,
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
