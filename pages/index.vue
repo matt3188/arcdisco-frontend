@@ -16,7 +16,7 @@ export default {
       testimonials: [],
     }
   },
-  async mounted() {
+  async fetch() {
     this.testimonials = await this.$axios.$get('/testimonials')
   },
 }
