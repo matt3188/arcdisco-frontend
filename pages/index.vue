@@ -1,11 +1,13 @@
 <template>
-  <div>
-    <img v-if="page.heroImage" :src="page.heroImage" style="width: 100%" />
-    <h1 class="text-3xl font-bold underline">
-      {{ page.mainHeading }}
-    </h1>
-    <!-- eslint-disable-next-line vue/no-v-html -->
-    <div v-html="$md.render(page.description)" />
+  <div class="prose max-w-none">
+    <img v-if="page.heroImage" :src="page.heroImage" />
+    <div class="container mx-auto">
+      <h1 class="text-3xl font-bold">
+        {{ page.mainHeading }}
+      </h1>
+      <!-- eslint-disable-next-line vue/no-v-html -->
+      <div v-html="$md.render(page.description)" />
+    </div>
   </div>
 </template>
 

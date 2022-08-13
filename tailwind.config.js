@@ -8,7 +8,25 @@ module.exports = {
     './nuxt.config.{js,ts}',
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      sans: ['Raleway', 'sans-serif'],
+      poppins: ['Poppins', 'sans-serif'],
+    },
+    extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.zinc.500'),
+            a: {
+              color: theme('colors.zinc.500'),
+              '&:hover': {
+                color: theme('colors.zinc.800'),
+              },
+            },
+          },
+        },
+      }),
+    },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }
