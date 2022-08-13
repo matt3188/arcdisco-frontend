@@ -41,6 +41,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/markdownit',
+    '@nuxtjs/apollo',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -62,6 +63,14 @@ export default {
     linkify: true,
     breaks: true,
     injected: true,
+  },
+
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: process.env.GRAPHQL_ROUTE,
+      },
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
