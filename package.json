@@ -21,7 +21,7 @@
     "@nuxtjs/apollo": "^4.0.1-rc.5",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/markdownit": "^2.0.0",
-    "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/pwa": "3.2.0",
     "@strapi/plugin-graphql": "^4.3.4",
     "@tailwindcss/typography": "^0.5.4",
     "apollo-cache-inmemory": "^1.6.6",
@@ -67,6 +67,15 @@
     "nohoist": [
       "**/tailwindcss",
       "**/@tailwindcss/**"
+    ]
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": [
+      "npx prettier --write .",
+      "git add"
     ]
   }
 }
