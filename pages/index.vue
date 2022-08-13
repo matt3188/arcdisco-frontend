@@ -9,7 +9,7 @@
 
 <script>
 import { homePage } from '@/graphql/query'
-import { normalize } from '@/utils/normalize'
+import { normalise } from '~/utils/normalise'
 
 export default {
   name: 'IndexPage',
@@ -18,7 +18,7 @@ export default {
     const res = await client.query({
       query: homePage,
     })
-    const data = normalize(res.data).homePage
+    const data = normalise(res.data).homePage
     const heroImage = `${process.env.IMAGE_ROUTE}${data.heroImage[0].url}`
     return {
       page: {

@@ -5,7 +5,7 @@
  * @param {Object} data
  * @returns {Object} Flat response
  */
-export const normalize = (data) => {
+export const normalise = (data) => {
   const isObject = (data) =>
     Object.prototype.toString.call(data) === '[object Object]'
   const isArray = (data) =>
@@ -21,7 +21,7 @@ export const normalize = (data) => {
   }
 
   if (isArray(data)) {
-    return data.map((item) => normalize(item))
+    return data.map((item) => normalise(item))
   }
 
   if (isObject(data)) {
@@ -36,7 +36,7 @@ export const normalize = (data) => {
     }
 
     for (const key in data) {
-      data[key] = normalize(data[key])
+      data[key] = normalise(data[key])
     }
 
     return data
