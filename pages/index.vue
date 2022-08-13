@@ -1,7 +1,9 @@
 <template>
   <div>
     <img v-if="page.heroImage" :src="page.heroImage" style="width: 100%" />
-    <h1>{{ page.mainHeading }}</h1>
+    <h1 class="text-3xl font-bold underline">
+      {{ page.mainHeading }}
+    </h1>
     <!-- eslint-disable-next-line vue/no-v-html -->
     <div v-html="$md.render(page.description)" />
   </div>
