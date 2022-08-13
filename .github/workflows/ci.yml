@@ -55,6 +55,8 @@ jobs:
         run: yarn generate
         env:
           API_ROUTE: ${{ secrets.API_ROUTE }}
+          IMAGE_ROUTE: ${{ secrets.IMAGE_ROUTE }}
+          GRAPHQL_ROUTE: ${{ secrets.GRAPHQL_ROUTE }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
