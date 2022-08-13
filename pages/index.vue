@@ -1,29 +1,30 @@
 <template>
   <div>
+    <img v-if="page.heroImage" :src="page.heroImage" style="width: 100%" />
+    <h1>{{ page.mainHeading }}</h1>
     <!-- eslint-disable-next-line vue/no-v-html -->
-    <h1>{{ home.data.attributes.mainHeading }}</h1>
-    <div v-html="content" />
-    <h2>Testimonials</h2>
-    <div v-for="testimonial in testimonials.data" :key="testimonial.id">
-      <p>{{ testimonial.attributes.Author }}</p>
-      <p>{{ testimonial.attributes.Testimonial }}</p>
-    </div>
+    <div v-html="$md.render(page.description)" />
   </div>
 </template>
 
 <script>
+import { homePage } from '@/graphql/query'
+import { normalize } from '@/utils/normalize'
+
 export default {
   name: 'IndexPage',
-
-  async asyncData({ $axios, $md }) {
-    const testimonials = await $axios.$get('/testimonials')
-    const home = await $axios.$get('/home-page')
-    const content = $md.render(home.data.attributes.description)
-
+  async asyncData({ app }) {
+    const client = app.apolloProvider.defaultClient
+    const res = await client.query({
+      query: homePage,
+    })
+    const data = normalize(res.data).homePage
+    const heroImage = `${process.env.IMAGE_ROUTE}${data.heroImage[0].url}`
     return {
-      home,
-      content,
-      testimonials,
+      page: {
+        ...data,
+        heroImage,
+      },
     }
   },
 }
