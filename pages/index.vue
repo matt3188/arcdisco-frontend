@@ -35,7 +35,7 @@ export default {
 
     const data = normalise(res.data).homePage
     const reviews = normalise(list.data).testimonials
-    const heroImage = `${process.env.IMAGE_ROUTE}${data.heroImage[0].url}`
+    const heroImage = data.heroImage[0].url
 
     return {
       reviews,
@@ -47,12 +47,12 @@ export default {
   },
   head() {
     return {
-      title: this.page.SEO.metaTitle,
+      title: this.page.seo.metaTitle,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: this.page.SEO.metaDescription,
+          content: this.page.seo.metaDescription,
         },
       ],
       fetchOnServer: true,
