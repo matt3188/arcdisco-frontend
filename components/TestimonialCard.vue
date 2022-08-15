@@ -1,10 +1,12 @@
 <template>
-  <div class="flex flex-auto bg-white shadow overflow-hidden sm:rounded-lg p-3">
-    <h4 class="text-base text-slate-900 font-semibold mt-0 mb-0">
-      {{ author }}
-    </h4>
-    <p class="mt-1">{{ event }}</p>
-    <div class="text-sm">{{ testimonial }}</div>
+  <div class="p-3">
+    <div class="bg-white shadow overflow-hidden sm:rounded-lg p-3">
+      <h4 class="text-base text-slate-900 font-semibold mt-0 mb-0">
+        {{ author }}
+      </h4>
+      <p class="mt-1">{{ event }}</p>
+      <div class="text-sm">{{ testimonial }}</div>
+    </div>
   </div>
 </template>
 
