@@ -5,14 +5,14 @@
       <h1 class="text-3xl font-bold">
         {{ page.mainHeading }}
       </h1>
-      <!-- eslint-disable-next-line vue/no-v-html -->
       <div v-html="$md.render(page.description)" />
+      <TestimonialsList v-if="reviews" :testimonials="reviews" />
     </div>
-    <TestimonialsList v-if="reviews" :testimonials="reviews" />
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import { homePage } from '~/graphql/homePage'
 import { testimonials } from '~/graphql/testimonials'
 import { normalise } from '~/utils/normalise'
@@ -57,6 +57,14 @@ export default {
       ],
       fetchOnServer: true,
     }
+  },
+  mounted() {
+    this.fetchMainMenu('main-navigation')
+    this.fetchFooterMenu('footer-navigation')
+    this.fetchFooterInfo()
+  },
+  methods: {
+    ...mapActions(['fetchFooterInfo', 'fetchMainMenu', 'fetchFooterMenu']),
   },
 }
 </script>

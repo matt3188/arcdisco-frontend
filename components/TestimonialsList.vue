@@ -1,5 +1,5 @@
 <template>
-  <div v-if="testimonials" class="p-8 bg-gray-100">
+  <div v-if="testimonials" class="p-8 mt-8 mb-8 border-y border-neutral-200">
     <VueSlickCarousel v-bind="options">
       <TestimonialCard
         v-for="testimonial in testimonials"
