@@ -14,9 +14,16 @@ export const homePage = gql`
               }
             }
           }
-          SEO {
+          seo {
             metaDescription
             metaTitle
+            metaImage {
+              data {
+                attributes {
+                  url
+                }
+              }
+            }
           }
         }
       }
