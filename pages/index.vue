@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
 import { homePage } from '~/graphql/homePage'
 import { testimonials } from '~/graphql/testimonials'
 import { normalise } from '~/utils/normalise'
@@ -57,14 +56,6 @@ export default {
       ],
       fetchOnServer: true,
     }
-  },
-  mounted() {
-    this.fetchMainMenu('main-navigation')
-    this.fetchFooterMenu('footer-navigation')
-    this.fetchFooterInfo()
-  },
-  methods: {
-    ...mapActions(['fetchFooterInfo', 'fetchMainMenu', 'fetchFooterMenu']),
   },
 }
 </script>
