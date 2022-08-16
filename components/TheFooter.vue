@@ -33,11 +33,21 @@
 </template>
 
 <script>
+import { footer } from '~/graphql/footer'
+import { normalise } from '~/utils/normalise'
+
 export default {
   name: 'TheFooter',
-  computed: {
-    info() {
-      return this.$store.state.footerInfo[0]
+  apollo: {
+    data: {
+      query: footer,
+      update: (data) => {
+        const footer = normalise(data)
+        return {
+          navigation: footer.renderNavigation,
+          info: footer.footers[0],
+        }
+      },
     },
   },
 }

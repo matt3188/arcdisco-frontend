@@ -2,6 +2,11 @@
 import gql from 'graphql-tag'
 export const footer = gql`
   query Footer {
+    renderNavigation(navigationIdOrSlug: "footer-navigation") {
+      id
+      title
+      path
+    }
     footers {
       data {
         attributes {
