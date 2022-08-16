@@ -1,11 +1,18 @@
 <template>
   <div class="p-3">
-    <div class="bg-white shadow overflow-hidden sm:rounded-lg p-3">
-      <h4 class="text-base text-slate-900 font-semibold mt-0 mb-0">
-        {{ author }}
+    <div class="relative text-center overflow-hidden p-3">
+      <h4 class="text-base text-slate-900 font-semibold my-0">
+        {{ event }}
       </h4>
-      <p class="mt-1">{{ event }}</p>
-      <div class="text-sm">{{ testimonial }}</div>
+      <div class="text-sm" v-html="$md.render(testimonial)" />
+      <p class="text-slate-900">- {{ author }}</p>
+      <div
+        v-if="poptopReview"
+        class="absolute bottom-9 right-0 transform-gpu origin-center"
+        style="transform: rotate(-25deg)"
+      >
+        <PopTopLogo />
+      </div>
     </div>
   </div>
 </template>

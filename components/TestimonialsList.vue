@@ -1,5 +1,5 @@
 <template>
-  <div v-if="testimonials" class="p-8 mt-8 mb-8 border-y border-neutral-200">
+  <div v-if="testimonials" class="py-8 my-8">
     <VueSlickCarousel v-bind="options">
       <TestimonialCard
         v-for="testimonial in testimonials"
@@ -24,6 +24,7 @@ export default {
         autoplay: true,
         slidesToShow: 3,
         arrows: false,
+        dots: true,
         responsive: [
           {
             breakpoint: 600,
