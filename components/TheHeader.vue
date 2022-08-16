@@ -25,7 +25,7 @@
 
       <!-- Navbar -->
       <div class="hidden md:block">
-        <TheMainNav :is-vertical="false" />
+        <TheMainNav />
       </div>
 
       <!-- Dark Background Transition -->
@@ -75,7 +75,7 @@
           <TheLogo />
         </span>
 
-        <TheMainNav @toggle-nav="closeDraw" />
+        <TheMainNav />
 
         <!-- <FollowUs /> -->
       </aside>
@@ -101,9 +101,15 @@ export default {
       },
     },
   },
+  created() {
+    this.$nuxt.$on('close-nav', () => this.closeDraw())
+  },
   mounted() {
-    document.addEventListener('keydown', ({ keyCode }) => {
-      if (keyCode === 27 && this.isOpen) this.isOpen = false
+    document.addEventListener('keydown', ($event) => {
+      const keyCode = $event.key || $event.keyCode
+      if ((keyCode === 27 || keyCode === 'Escape') && this.isOpen) {
+        this.isOpen = false
+      }
     })
   },
   methods: {

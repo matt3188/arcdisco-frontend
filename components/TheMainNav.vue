@@ -1,16 +1,21 @@
 <template>
-  <div class="prose flex content-center flex-col md:flex-row">
+  <ul class="flex content-center flex-col md:flex-row">
     <template v-for="navItem in renderNavigation">
-      <NuxtLink
+      <li
         :key="navItem.id"
-        :to="navItem.path"
-        class="self-start w-full md:w-auto py-3 md:py-0 md:self-center md:mr-3 hover:text-zinc-400 transition-colors no-underline"
-        @click="toggle"
+        class="w-auto py-3 md:py-0"
+        @click="$nuxt.$emit('close-nav')"
       >
-        {{ navItem.title }}
-      </NuxtLink>
+        <NuxtLink
+          :key="navItem.id"
+          :to="navItem.path"
+          class="self-start w-full md:w-auto py-3 md:py-0 md:self-center md:mr-3 hover:text-zinc-400 transition-colors no-underline"
+        >
+          {{ navItem.title }}
+        </NuxtLink>
+      </li>
     </template>
-  </div>
+  </ul>
 </template>
 
 <script>
@@ -21,11 +26,6 @@ export default {
   apollo: {
     renderNavigation: {
       query: mainNavigation,
-    },
-  },
-  methods: {
-    toggle() {
-      this.$emit('toggle-nav', false)
     },
   },
 }
