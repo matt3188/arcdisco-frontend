@@ -1,20 +1,22 @@
 <template>
   <footer>
     <section class="p-8 footer-top bg-neutral-100">
-      <div class="grid grid-cols-3 gap-3">
-        <div v-if="info">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div>
           <h3 class="mb-2">A.R.C Disco</h3>
-          <div class="mb-2" v-html="$md.render(info.address)" />
+          <div class="mb-2" v-html="$md.render(data.info.address)" />
           <p class="mb-2">
-            <a :href="`mailto:${info.email}`">{{ info.email }}</a>
+            <a :href="`mailto:${data.info.email}`">{{ data.info.email }}</a>
           </p>
           <p>
-            <a :href="`tel:+${info.telephone}`">{{ info.telephone }}</a>
+            <a :href="`tel:+${data.info.telephone}`">{{
+              data.info.telephone
+            }}</a>
           </p>
         </div>
         <div>
           <h3 class="mb-2">More links</h3>
-          <template v-for="navItem in $store.state.footerMenu">
+          <template v-for="navItem in data.navigation">
             <NuxtLink :key="navItem.id" :to="navItem.path" class="self-center">
               {{ navItem.title }}
             </NuxtLink>
