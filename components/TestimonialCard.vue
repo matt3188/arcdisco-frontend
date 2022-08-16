@@ -8,8 +8,7 @@
       <p class="text-slate-900">- {{ author }}</p>
       <div
         v-if="poptopReview"
-        class="absolute bottom-9 right-0 transform-gpu origin-center"
-        style="transform: rotate(-25deg)"
+        class="absolute bottom-9 right-0 overflow-visible"
       >
         <PopTopLogo />
       </div>
