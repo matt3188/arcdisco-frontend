@@ -9,7 +9,7 @@
         <NuxtLink
           :key="navItem.id"
           :to="navItem.path"
-          class="self-start w-full md:w-auto py-3 md:py-0 md:self-center md:mr-3 hover:text-zinc-400 transition-colors no-underline"
+          class="flex self-start w-full md:w-fit py-3 md:py-0 md:self-center md:mr-3 hover:text-zinc-400 transition-colors no-underline"
         >
           {{ navItem.title }}
         </NuxtLink>
