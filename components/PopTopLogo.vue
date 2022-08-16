@@ -2,21 +2,7 @@
   <a
     href="https://www.poptop.uk.com/supplier/arc-disco/"
     target="_blank"
-    class="
-      group
-      transform
-      origin-center
-      transition
-      ease-in-out
-      hover:w-full
-      justify-center
-      align-items-center
-      relative
-      flex flex-col
-      no-underline
-      bg-orange-200
-      rounded-full
-    "
+    class="group transform origin-center transition ease-in-out hover:w-full justify-center align-items-center relative flex flex-col no-underline bg-orange-200 rounded-full"
   >
     <svg
       width="56"
@@ -39,18 +25,7 @@
       ></path>
     </svg>
     <div
-      class="
-        w-40
-        opacity-0
-        absolute
-        transition
-        ease-in-out
-        p-2
-        pr-3
-        group-hover:opacity-100 group-hover:-translate-x-36
-        bg-orange-200 bg-opacity-50
-        rounded-l-full
-      "
+      class="w-40 opacity-0 absolute transition ease-in-out p-2 pr-3 group-hover:opacity-100 group-hover:-translate-x-36 bg-orange-200 bg-opacity-50 rounded-l-full"
       style="z-index: -1"
     >
       Poptop Certified
