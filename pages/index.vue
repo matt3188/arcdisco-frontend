@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="prose max-w-none">
     <img v-if="page.heroImage" :src="page.heroImage" />
     <div class="container mx-auto pl-4 pr-4">
       <h1 class="text-3xl font-bold">

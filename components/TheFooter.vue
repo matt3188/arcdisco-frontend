@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="prose max-w-none">
     <section class="p-8 footer-top bg-neutral-100">
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <div>

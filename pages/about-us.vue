@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="prose max-w-none">
     <header
       class="flex relative w-full bg-center bg-cover"
       :style="`backgroundImage: url(${page.banner.url})`"
