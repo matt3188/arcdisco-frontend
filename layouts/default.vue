@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white h-screen">
-    <TheNavbar />
+    <TheHeader />
     <Nuxt keep-alive />
     <TheFooter />
   </div>
