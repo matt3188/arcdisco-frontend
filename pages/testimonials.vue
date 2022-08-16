@@ -1,5 +1,5 @@
 <template>
-  <div class="prose max-w-none">
+  <div v-if="page" class="prose max-w-none">
     <HeroBanner
       :heading="page.pageHeader.heading"
       :banner="page.pageHeader.banner.url"
