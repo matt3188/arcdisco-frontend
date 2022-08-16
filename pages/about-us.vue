@@ -5,15 +5,7 @@
       :style="`backgroundImage: url(${page.banner.url})`"
     >
       <div
-        class="
-          flex
-          items-center
-          justify-center
-          w-full
-          h-full
-          bg-gray-900 bg-opacity-50
-          py-12
-        "
+        class="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-50 py-12"
       >
         <h2 class="mt-8 mb-6 text-4xl lg:text-5xl font-bold text-gray-100">
           {{ page.heading }}
