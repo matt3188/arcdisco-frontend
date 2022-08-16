@@ -1,7 +1,9 @@
 <template>
   <div class="bg-white">
     <TheNavbar />
-    <Nuxt keep-alive />
+    <div class="prose max-w-none">
+      <Nuxt keep-alive />
+    </div>
     <TheFooter />
   </div>
 </template>
