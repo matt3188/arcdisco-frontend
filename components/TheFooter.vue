@@ -1,5 +1,5 @@
 <template>
-  <footer class="prose max-w-none">
+  <footer class="prose max-w-none sticky top-[100vh]">
     <section class="p-8 footer-top bg-neutral-100">
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <div>
@@ -28,7 +28,9 @@
         </div>
       </div>
     </section>
-    <section class="p-8 footer-bottom bg-neutral-200">
+    <section
+      class="p-8 footer-bottom bg-neutral-200 flex items-center justify-center"
+    >
       &copy; A.R.C Disco. All rights reserved
     </section>
   </footer>
