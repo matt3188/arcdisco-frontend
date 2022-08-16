@@ -2,14 +2,7 @@
   <a
     href="https://www.poptop.uk.com/supplier/arc-disco/"
     target="_blank"
-    class="
-      relative
-      flex flex-col
-      no-underline
-      bg-orange-200 bg-opacity-50
-      rounded-full
-      p-2
-    "
+    class="relative flex flex-col no-underline bg-orange-200 bg-opacity-50 rounded-full p-2"
   >
     <svg
       width="90"
