@@ -3,11 +3,11 @@
     :class="[
       backgroundColor,
       { 'bg-center bg-cover': banner.length },
-      'flex relative max-w-none py-24 ',
+      'flex relative max-w-none py-24 text-center',
     ]"
     :style="banner ? `backgroundImage: url(${banner})` : ''"
   >
-    <div class="flex flex-col items-center justify-center w-full h-full">
+    <div class="flex flex-col items-center justify-center w-full h-full px-4">
       <component :is="tag" class="text-slate-900 m-0 text-3xl font-light">
         {{ heading }}
       </component>
