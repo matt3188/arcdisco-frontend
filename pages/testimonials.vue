@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-none">
+  <div v-if="!$apollo.loading" class="max-w-none">
     <HeroBanner
       :heading="page.pageHeader.heading"
       :banner="page.pageHeader.banner.url"
