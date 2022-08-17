@@ -1,5 +1,5 @@
 <template>
-  <component :is="tag" :class="`${size} text-slate-900 m-0 font-light`">{{
+  <component :is="tag" :class="`${size} m-0 font-light text-slate-900`">{{
     heading
   }}</component>
 </template>

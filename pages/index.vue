@@ -12,7 +12,7 @@
     >
       <NuxtLink
         to="/book-us"
-        class="bg-white text-slate-900 no-underline px-6 py-2"
+        class="bg-white px-6 py-2 text-slate-900 no-underline"
       >
         Book us
       </NuxtLink>

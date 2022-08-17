@@ -1,5 +1,5 @@
 <template>
-  <ul class="flex content-center flex-col md:flex-row">
+  <ul class="flex flex-col content-center md:flex-row">
     <template v-for="navItem in renderNavigation">
       <li
         :key="navItem.id"
@@ -9,7 +9,7 @@
         <NuxtLink
           :key="navItem.id"
           :to="navItem.path"
-          class="flex self-start w-full md:w-fit uppercase md:px-4 py-3 md:py-0 md:self-center md:mr-3 text-slate-900 hover:text-zinc-400 transition-colors no-underline text-sm font-medium"
+          class="flex w-full self-start py-3 text-sm font-medium uppercase text-slate-900 no-underline transition-colors hover:text-zinc-400 md:mr-3 md:w-fit md:self-center md:px-4 md:py-0"
         >
           {{ navItem.title }}
         </NuxtLink>

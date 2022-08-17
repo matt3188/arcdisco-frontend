@@ -1,7 +1,7 @@
 <template>
-  <div class="prose follow mt-3">
-    <p class="italic font-sans text-sm">follow us:</p>
-    <div class="social flex space-x-5 mt-4">
+  <div class="follow prose mt-3">
+    <p class="font-sans text-sm italic">follow us:</p>
+    <div class="social mt-4 flex space-x-5">
       <a href="#">
         <svg
           aria-hidden="true"

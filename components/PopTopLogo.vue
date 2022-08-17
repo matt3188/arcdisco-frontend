@@ -2,7 +2,7 @@
   <a
     href="https://www.poptop.uk.com/supplier/arc-disco/"
     target="_blank"
-    class="group transform origin-center transition ease-in-out hover:w-full justify-center align-items-center relative flex flex-col no-underline bg-orange-200 rounded-full"
+    class="align-items-center group relative flex origin-center transform flex-col justify-center rounded-full bg-orange-200 no-underline transition ease-in-out hover:w-full"
   >
     <svg
       width="56"
@@ -11,7 +11,7 @@
       preserveAspectRatio="xMidYMid meet"
       data-tid="Vec"
       style="display: block"
-      class="bg-orange-200 p-2 rounded-full"
+      class="rounded-full bg-orange-200 p-2"
     >
       <path
         d="M32.6002 52.8588C35.6063 52.4834 38.6625 52.9421 41.4005 54.1798C44.1385 55.4174 46.4413 57.3811 48.0313 59.8341C49.6234 57.3829 51.9266 55.4207 54.664 54.1834C57.4014 52.946 60.4566 52.486 63.4625 52.8588C72.2803 53.7176 72.4567 59.1428 78.8937 59.7503C81.392 59.9838 83.8915 59.3165 85.8964 57.881C87.9012 56.4454 89.2651 54.3463 89.7176 52C90.8446 55.2438 91.2353 58.6777 90.8639 62.0754C90.5876 65.234 89.653 68.3088 88.1143 71.1209C86.5756 73.933 84.4637 76.4262 81.9014 78.4554C79.3391 80.4847 76.3777 82.0094 73.1894 82.9408C70.0011 83.8723 66.6497 84.1918 63.3302 83.881C60.7889 83.6281 58.3006 83.0211 55.9453 82.0795C52.6494 80.6749 49.8869 78.3424 48.0313 75.3975C46.1824 78.3554 43.4081 80.6913 40.0953 82.0795C37.74 83.0211 35.2517 83.6281 32.7104 83.881C29.384 84.1976 26.0246 83.881 22.8285 82.9497C19.6324 82.0184 16.6637 80.491 14.096 78.4568C11.5283 76.4227 9.41317 73.9226 7.87415 71.1027C6.33513 68.2828 5.40314 65.1996 5.13266 62.0335C4.76754 58.6496 5.15816 55.2306 6.27898 52C6.73198 54.3582 8.10555 56.4669 10.1248 57.904C12.144 59.341 14.6599 60.0005 17.169 59.7503C23.7823 59.1009 23.9146 53.7176 32.6002 52.8588Z"
@@ -25,11 +25,14 @@
       ></path>
     </svg>
     <div
-      class="w-40 opacity-0 absolute transition ease-in-out p-2 pr-3 group-hover:opacity-100 group-hover:-translate-x-36 bg-orange-200 bg-opacity-50 rounded-l-full"
+      class="absolute w-40 rounded-l-full bg-orange-200 p-2 pr-3 opacity-0 transition ease-in-out group-hover:-translate-x-36 group-hover:opacity-100"
       style="z-index: -1"
     >
       Poptop Certified
     </div>
+    <button
+      class="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3"
+    ></button>
   </a>
 </template>
 

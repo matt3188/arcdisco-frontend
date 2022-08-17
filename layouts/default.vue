@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white h-screen">
+  <div class="h-screen bg-white">
     <TheHeader />
     <Nuxt keep-alive />
     <TheFooter />

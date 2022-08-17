@@ -2,13 +2,13 @@
   <section
     :class="[
       backgroundColor,
-      { 'bg-center bg-cover': banner.length },
-      'flex relative max-w-none py-24 text-center',
+      { 'bg-cover bg-center': banner.length },
+      'relative flex max-w-none py-24 text-center',
     ]"
     :style="banner ? `backgroundImage: url(${banner})` : ''"
   >
-    <div class="flex flex-col items-center justify-center w-full h-full px-4">
-      <component :is="tag" class="text-slate-900 m-0 text-3xl font-light">
+    <div class="flex h-full w-full flex-col items-center justify-center px-4">
+      <component :is="tag" class="m-0 text-3xl font-light text-slate-900">
         {{ heading }}
       </component>
       <RenderedMarkdown :content="content" size="text-lg" />

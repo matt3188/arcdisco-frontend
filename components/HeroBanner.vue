@@ -1,12 +1,12 @@
 <template>
   <header
-    class="flex relative w-full bg-center bg-cover"
+    class="relative flex w-full bg-cover bg-center"
     :style="`backgroundImage: url(${banner})`"
   >
     <div
-      class="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-50 py-12"
+      class="flex h-full w-full items-center justify-center bg-gray-900 bg-opacity-50 py-12"
     >
-      <h2 class="mt-8 mb-6 text-4xl lg:text-6xl font-light text-gray-100">
+      <h2 class="mt-8 mb-6 text-4xl font-light text-gray-100 lg:text-6xl">
         {{ heading }}
       </h2>
     </div>

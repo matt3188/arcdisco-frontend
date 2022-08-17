@@ -5,7 +5,7 @@
       :banner="page.pageHeader.banner.url"
     />
     <QuoteBanner v-bind="page.intro" background-color="bg-white" />
-    <div class="container mx-auto pb-10 px-4">
+    <div class="container mx-auto px-4 pb-10">
       <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
         <div v-for="testimonial in page.testimonials" :key="testimonial.id">
           <TestimonialCard

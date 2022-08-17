@@ -1,6 +1,6 @@
 <template>
-  <footer class="max-w-none sticky top-[100vh]">
-    <section class="p-8 footer-top bg-neutral-100">
+  <footer class="sticky top-[100vh] max-w-none">
+    <section class="footer-top bg-neutral-100 p-8">
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <div>
           <HeadingTag tag="h3" heading="A.R.C Disco" />
@@ -34,7 +34,7 @@
       </div>
     </section>
     <section
-      class="p-8 footer-bottom bg-neutral-200 flex items-center justify-center"
+      class="footer-bottom flex items-center justify-center bg-neutral-200 p-8"
     >
       &copy; A.R.C Disco. All rights reserved
     </section>

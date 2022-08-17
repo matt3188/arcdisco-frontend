@@ -1,5 +1,5 @@
 <template>
-  <nav class="w-full p-6 bg-transparent">
+  <nav class="w-full bg-transparent p-6">
     <div class="flex items-center justify-between">
       <!-- Header logo -->
       <div>
@@ -39,7 +39,7 @@
       >
         <div
           v-show="isOpen"
-          class="z-10 fixed inset-0 transition-opacity"
+          class="fixed inset-0 z-10 transition-opacity"
           @keydown.esc="closeDraw"
         >
           <div
@@ -52,13 +52,13 @@
 
       <!-- Drawer Menu -->
       <aside
-        class="p-5 transform top-0 left-0 w-64 bg-white fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30"
+        class="fixed top-0 left-0 z-30 h-full w-64 transform overflow-auto bg-white p-5 transition-all duration-300 ease-in-out"
         :class="isOpen ? 'translate-x-0' : '-translate-x-full'"
       >
         <div class="close">
           <button class="absolute top-0 right-0 mt-4 mr-4" @click="closeDraw">
             <svg
-              class="w-6 h-6"
+              class="h-6 w-6"
               fill="none"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -71,7 +71,7 @@
           </button>
         </div>
 
-        <span class="flex w-full items-center py-4 border-b" @click="closeDraw">
+        <span class="flex w-full items-center border-b py-4" @click="closeDraw">
           <TheLogo />
         </span>
 

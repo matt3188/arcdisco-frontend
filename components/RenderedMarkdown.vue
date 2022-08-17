@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="`${size} font-light leading-7 mb-5`"
+    :class="`${size} mb-5 font-light leading-7`"
     v-html="$md.render(content)"
   />
 </template>
