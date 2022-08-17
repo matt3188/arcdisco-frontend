@@ -1,8 +1,9 @@
 <template>
   <section
     :class="[
+      backgroundColor,
       { 'bg-center bg-cover': banner.length },
-      'flex relative max-w-none py-24 bg-orange-100',
+      'flex relative max-w-none py-24 ',
     ]"
     :style="banner ? `backgroundImage: url(${banner})` : ''"
   >
@@ -43,7 +44,7 @@ export default {
     },
     backgroundColor: {
       type: String,
-      default: '#f3ddce',
+      default: 'bg-white',
     },
   },
 }

@@ -5,7 +5,11 @@
       <HeadingTag :heading="page.mainHeading" />
       <RenderedMarkdown :content="page.description" />
     </PageContent>
-    <QuoteBanner tag="h3" heading="Book your event with us today">
+    <QuoteBanner
+      tag="h3"
+      heading="Book your event with us today"
+      background-color="bg-orange-100"
+    >
       <NuxtLink
         to="/book-us"
         class="bg-white text-slate-900 no-underline px-6 py-2"
