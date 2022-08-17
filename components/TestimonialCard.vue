@@ -1,11 +1,11 @@
 <template>
   <div class="p-3">
     <div class="relative text-center overflow-hidden p-3">
-      <h4 class="text-base text-slate-900 font-semibold my-0">
+      <h4 class="text-base text-slate-900 font-medium mt-0 mb-5">
         {{ event }}
       </h4>
-      <div class="text-sm" v-html="$md.render(testimonial)" />
-      <p class="text-slate-900">- {{ author }}</p>
+      <RenderedMarkdown :content="testimonial" />
+      <p class="font-medium text-sm text-slate-900">- {{ author }}</p>
       <div
         v-if="poptopReview"
         class="absolute bottom-9 right-0 overflow-visible"

@@ -1,8 +1,8 @@
 <template>
-  <div v-if="page" class="prose max-w-none">
+  <div class="prose max-w-none">
     <HeroBanner :heading="page.heading" :banner="page.banner.url" />
     <div class="container mx-auto py-8 pl-4 pr-4">
-      <div v-html="$md.render(page.content)" />
+      <RenderedMarkdown :content="page.content" />
     </div>
   </div>
 </template>

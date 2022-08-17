@@ -1,30 +1,35 @@
 <template>
-  <footer class="prose max-w-none sticky top-[100vh]">
+  <footer class="max-w-none sticky top-[100vh]">
     <section class="p-8 footer-top bg-neutral-100">
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <div>
-          <h3 class="mb-2">A.R.C Disco</h3>
-          <div class="mb-2" v-html="$md.render(data.info.address)" />
-          <p class="mb-2">
-            <a :href="`mailto:${data.info.email}`">{{ data.info.email }}</a>
-          </p>
-          <p>
-            <a :href="`tel:+${data.info.telephone}`">{{
-              data.info.telephone
-            }}</a>
-          </p>
+          <HeadingTag tag="h3" heading="A.R.C Disco" />
+          <div class="text-sm font-light leading-7">
+            <RenderedMarkdown :content="data.info.address" />
+            <p class="mb-2">
+              <a :href="`mailto:${data.info.email}`">{{ data.info.email }}</a>
+            </p>
+            <p>
+              <a :href="`tel:+${data.info.telephone}`">{{
+                data.info.telephone
+              }}</a>
+            </p>
+          </div>
         </div>
         <div>
-          <h3 class="mb-2">More links</h3>
+          <HeadingTag tag="h3" heading="More links" />
           <template v-for="navItem in data.navigation">
-            <NuxtLink :key="navItem.id" :to="navItem.path" class="self-center">
+            <NuxtLink
+              :key="navItem.id"
+              :to="navItem.path"
+              class="self-center font-light"
+            >
               {{ navItem.title }}
             </NuxtLink>
           </template>
         </div>
         <div>
-          <h3 class="mb-2">Even more links</h3>
-          <p>Contact us</p>
+          <HeadingTag tag="h3" heading="Even more links" />
         </div>
       </div>
     </section>

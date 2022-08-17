@@ -16,6 +16,10 @@ export const testimonialsPage = gql`
     testimonialsPage {
       data {
         attributes {
+          intro {
+            heading
+            content
+          }
           pageHeader {
             heading
             banner {

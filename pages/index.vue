@@ -1,13 +1,21 @@
 <template>
   <div class="prose max-w-none">
     <img v-if="page.heroImage" :src="page.heroImage" />
-    <div class="container mx-auto pl-4 pr-4">
-      <h1 class="text-3xl font-bold">
-        {{ page.mainHeading }}
-      </h1>
-      <div v-html="$md.render(page.description)" />
+    <PageContent>
+      <HeadingTag :heading="page.mainHeading" />
+      <RenderedMarkdown :content="page.description" />
+    </PageContent>
+    <QuoteBanner tag="h3" heading="Book your event with us today">
+      <NuxtLink
+        to="/book-us"
+        class="bg-white text-slate-900 no-underline px-6 py-2"
+      >
+        Book us
+      </NuxtLink>
+    </QuoteBanner>
+    <PageContent>
       <TestimonialsList v-if="reviews" :testimonials="reviews" />
-    </div>
+    </PageContent>
   </div>
 </template>
 

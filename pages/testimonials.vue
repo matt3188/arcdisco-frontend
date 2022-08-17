@@ -1,10 +1,11 @@
 <template>
-  <div v-if="page" class="prose max-w-none">
+  <div class="max-w-none">
     <HeroBanner
       :heading="page.pageHeader.heading"
       :banner="page.pageHeader.banner.url"
     />
-    <div class="container mx-auto pl-4 pr-4">
+    <QuoteBanner v-bind="page.intro" />
+    <div class="container mx-auto pb-10 px-4">
       <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
         <div v-for="testimonial in page.testimonials" :key="testimonial.id">
           <TestimonialCard
@@ -29,7 +30,9 @@ export default {
       update: (page) => {
         const pageHeader = normalise(page.testimonialsPage).pageHeader
         const testimonials = normalise(page.testimonials)
+        const intro = normalise(page.testimonialsPage).intro
         return {
+          intro,
           testimonials,
           pageHeader,
         }
