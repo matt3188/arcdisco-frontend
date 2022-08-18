@@ -13,11 +13,14 @@ import { normalise } from '~/utils/normalise'
 
 export default {
   name: 'AboutUs',
-  apollo: {
-    page: {
+  async asyncData({ app }) {
+    const client = app.apolloProvider.defaultClient
+    const res = await client.query({
       query: aboutPage,
-      update: (page) => normalise(page.aboutUs),
-    },
+    })
+    return {
+      page: normalise(res.data).aboutUs,
+    }
   },
 }
 </script>
