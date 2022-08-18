@@ -20,7 +20,7 @@ export const testimonialsPage = gql`
             heading
             content
           }
-          pageHeader {
+          header {
             heading
             banner {
               data {

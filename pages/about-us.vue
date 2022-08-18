@@ -1,6 +1,9 @@
 <template>
   <div v-if="!$apollo.loading" class="prose max-w-none">
-    <HeroBanner :heading="page.heading" :banner="page.banner.url" />
+    <HeroBanner
+      :heading="page.header.heading"
+      :banner="page.header.banner.url"
+    />
     <div class="container mx-auto py-8 pl-4 pr-4">
       <RenderedMarkdown :content="page.content" />
     </div>

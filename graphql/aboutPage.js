@@ -5,12 +5,14 @@ export const aboutPage = gql`
     aboutUs {
       data {
         attributes {
-          heading
           content
-          banner {
-            data {
-              attributes {
-                url
+          header {
+            heading
+            banner {
+              data {
+                attributes {
+                  url
+                }
               }
             }
           }

@@ -27,7 +27,7 @@ export default {
       query: testimonialsPage,
     })
     const page = normalise(res.data.testimonialsPage)
-    const pageHeader = page.pageHeader
+    const pageHeader = page.header
     const intro = page.intro
     const testimonials = normalise(res.data).testimonials
 
