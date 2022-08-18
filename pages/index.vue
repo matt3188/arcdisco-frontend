@@ -6,15 +6,16 @@
       <RenderedMarkdown :content="page.description" />
     </PageContent>
     <QuoteBanner
+      v-if="page.banner"
       tag="h3"
       heading="Book your event with us today"
       background-color="bg-orange-100"
     >
       <NuxtLink
-        to="/book-us"
+        :to="`/${page.banner.button_link}`"
         class="bg-white px-6 py-2 text-slate-900 no-underline"
       >
-        Book us
+        {{ page.banner.button_text }}
       </NuxtLink>
     </QuoteBanner>
     <PageContent>
@@ -46,6 +47,7 @@ export default {
 
     const data = normalise(res.data).homePage
     const reviews = normalise(list.data).testimonials
+    const banner = data.banner
     const heroImage = data.heroImage[0].url
 
     return {
@@ -53,6 +55,7 @@ export default {
       page: {
         ...data,
         heroImage,
+        banner,
       },
     }
   },

@@ -14,6 +14,20 @@ export const homePage = gql`
               }
             }
           }
+          banner {
+            heading
+            content
+            citation
+            banner_image {
+              data {
+                attributes {
+                  url
+                }
+              }
+            }
+            button_link
+            button_text
+          }
           seo {
             metaDescription
             metaTitle
