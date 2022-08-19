@@ -4,7 +4,7 @@
     :style="`backgroundImage: url(${banner})`"
   >
     <div
-      class="flex h-full w-full items-center justify-center bg-gray-900 bg-opacity-50 py-12"
+      class="flex h-full w-full flex-col items-center justify-center bg-gray-900 bg-opacity-50 py-12 text-center"
     >
       <h2
         v-if="heading"
@@ -12,15 +12,25 @@
       >
         {{ heading }}
       </h2>
+      <h3
+        v-if="subHeading"
+        class="mt-8 mb-6 text-xl font-light text-gray-100 lg:text-2xl"
+      >
+        {{ subHeading }}
+      </h3>
     </div>
   </header>
 </template>
 
 <script>
 export default {
-  name: 'HeroBanner',
+  name: 'CarouselSlide',
   props: {
     heading: {
+      type: String,
+      default: '',
+    },
+    subHeading: {
       type: String,
       default: '',
     },

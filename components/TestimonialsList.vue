@@ -1,22 +1,21 @@
 <template>
   <div v-if="testimonials" class="my-8 py-8">
-    <VueSlickCarousel v-bind="options">
+    <SlickCarousel :options="options">
       <TestimonialCard
         v-for="testimonial in testimonials"
         :key="testimonial.id"
         v-bind="testimonial"
       />
-    </VueSlickCarousel>
+    </SlickCarousel>
   </div>
 </template>
 
 <script>
-import VueSlickCarousel from 'vue-slick-carousel'
 import TestimonialCard from '@/components/TestimonialCard'
 
 export default {
   name: 'TestimonialsList',
-  components: { TestimonialCard, VueSlickCarousel },
+  components: { TestimonialCard },
   props: { testimonials: { type: Array, default: () => [] } },
   data() {
     return {
