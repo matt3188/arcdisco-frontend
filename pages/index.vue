@@ -1,9 +1,16 @@
 <template>
   <div class="prose max-w-none">
-    <img v-if="page.heroImage" :src="page.heroImage" />
+    <SlickCarousel v-if="page.carousel" :options="page.carousel_settings">
+      <CarouselSlide
+        v-for="slide in page.carousel"
+        :key="slide.id"
+        :heading="slide.heading"
+        :sub-heading="slide.sub_heading"
+        :banner="slide.image.url"
+      />
+    </SlickCarousel>
     <PageContent>
-      <HeadingTag :heading="page.mainHeading" />
-      <RenderedMarkdown :content="page.description" />
+      <RenderedMarkdown :content="page.content.content" />
     </PageContent>
     <QuoteBanner
       v-if="page.banner"
@@ -48,14 +55,14 @@ export default {
     const data = normalise(res.data).homePage
     const reviews = normalise(list.data).testimonials
     const banner = data.banner
-    const heroImage = data.heroImage[0].url
 
     return {
       reviews,
       page: {
         ...data,
-        heroImage,
         banner,
+        carousel: data.carousel,
+        carousel_settings: data.carousel_settings,
       },
     }
   },

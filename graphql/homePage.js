@@ -1,18 +1,31 @@
 // eslint-disable-next-line import/no-named-as-default
 import gql from 'graphql-tag'
+
 export const homePage = gql`
   query homePage {
     homePage {
       data {
         attributes {
-          mainHeading
-          description
-          heroImage {
-            data {
-              attributes {
-                url
+          content {
+            content
+          }
+          carousel {
+            heading
+            sub_heading
+            image {
+              data {
+                attributes {
+                  url
+                }
               }
             }
+          }
+          carousel_settings {
+            arrows
+            dots
+            autoplay
+            autoplaySpeed
+            slidesToShow
           }
           banner {
             heading
