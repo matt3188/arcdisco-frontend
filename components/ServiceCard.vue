@@ -2,13 +2,13 @@
   <div :class="[{ 'min-h-[440px]': image }, 'px-2 pb-2 md:w-1/4']">
     <div
       :class="[
-        'flex h-full flex-col border-2 p-4 text-center',
+        'flex h-full flex-col border-2 p-4 text-center ',
         { 'justify-between': image },
       ]"
     >
       <div
         v-if="image"
-        class="h-40 overflow-hidden bg-cover"
+        class="h-40 overflow-hidden bg-cover bg-center"
         :style="`backgroundImage: url(${image})`"
       />
       <h4>{{ name }}</h4>
