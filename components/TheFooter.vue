@@ -19,13 +19,11 @@
         <div>
           <HeadingTag tag="h3" heading="More links" />
           <template v-for="navItem in data.navigation">
-            <NuxtLink
-              :key="navItem.id"
-              :to="navItem.path"
-              class="self-center font-light"
-            >
-              {{ navItem.title }}
-            </NuxtLink>
+            <ul :key="navItem.id" class="flex flex-col">
+              <NuxtLink :to="navItem.path" class="font-light">
+                {{ navItem.title }}
+              </NuxtLink>
+            </ul>
           </template>
         </div>
         <div>
