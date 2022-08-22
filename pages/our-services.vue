@@ -7,7 +7,7 @@
       :content="page.banner.content"
     />
     <template v-if="Object.keys(page.services).length">
-      <div class="flex flex-row flex-wrap">
+      <div class="grid grid-cols-4">
         <ServiceCard
           v-for="service in page.services"
           :key="service.name"
