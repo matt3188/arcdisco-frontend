@@ -20,7 +20,7 @@
           :image="gallery.cover.formats.thumbnail.url"
           button-text="View gallery"
           :button-link="{
-            path: `gallery/${gallery.id}`,
+            path: `/gallery/${gallery.id}`,
             query: { name: gallery.name },
           }"
         />
