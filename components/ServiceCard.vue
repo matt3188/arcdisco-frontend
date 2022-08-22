@@ -44,7 +44,7 @@ export default {
       default: '',
     },
     buttonLink: {
-      type: String,
+      type: [String, Object],
       default: '',
     },
   },
