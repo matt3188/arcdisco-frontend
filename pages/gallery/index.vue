@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { galleryPage } from '~/graphql/galleryPage'
+import { galleryPage } from '~/graphql/pages'
 import { normalise } from '~/utils/normalise'
 
 export default {

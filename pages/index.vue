@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import { homePage } from '~/graphql/homePage'
+import { homePage } from '~/graphql/pages'
 import { testimonials } from '~/graphql/testimonials'
 import { normalise } from '~/utils/normalise'
 import TestimonialsList from '@/components/TestimonialsList'

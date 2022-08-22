@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-named-as-default
 import gql from 'graphql-tag'
 export const galleryPage = gql`
-  query galleries {
+  query Galleries {
     gallery {
       data {
         attributes {

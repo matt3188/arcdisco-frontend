@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { servicesPage } from '~/graphql/ourServices'
+import { servicesPage } from '~/graphql/pages'
 import { normalise } from '~/utils/normalise'
 
 export default {

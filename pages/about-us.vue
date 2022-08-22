@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { aboutPage } from '~/graphql/aboutPage'
+import { aboutPage } from '~/graphql/pages'
 import { normalise } from '~/utils/normalise'
 
 export default {

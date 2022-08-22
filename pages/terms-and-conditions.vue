@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { termsPage } from '~/graphql/termsPage'
+import { termsPage } from '~/graphql/pages'
 import { normalise } from '~/utils/normalise'
 
 export default {

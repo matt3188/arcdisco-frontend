@@ -1,23 +1,29 @@
 // eslint-disable-next-line import/no-named-as-default
 import gql from 'graphql-tag'
-
-export const termsPage = gql`
-  query termsPage {
-    termsAndCondition {
+export const servicesPage = gql`
+  query OurServices {
+    ourService {
       data {
         attributes {
           header {
             heading
-            banner {
+          }
+          banner {
+            heading
+            content
+          }
+          services {
+            name
+            image {
               data {
                 attributes {
                   url
                 }
               }
             }
-          }
-          content {
-            content
+            description
+            button_text
+            button_link
           }
         }
       }

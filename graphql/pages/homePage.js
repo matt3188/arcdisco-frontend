@@ -2,7 +2,7 @@
 import gql from 'graphql-tag'
 
 export const homePage = gql`
-  query homePage {
+  query HomePage {
     homePage {
       data {
         attributes {

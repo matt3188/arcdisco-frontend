@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { testimonialsPage } from '~/graphql/testimonialsPage'
+import { testimonialsPage } from '~/graphql/pages'
 import { normalise } from '~/utils/normalise'
 
 export default {

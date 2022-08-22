@@ -31,7 +31,7 @@ export default {
       },
     })
     return {
-      page: normalise(res.data.gallery),
+      page: normalise(res.data).gallery,
     }
   },
 }
