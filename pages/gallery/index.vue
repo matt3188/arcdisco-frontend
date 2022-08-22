@@ -11,20 +11,21 @@
       :content="page.banner.content"
     >
     </QuoteBanner>
-
-    <div class="grid grid-cols-4">
-      <ServiceCard
-        v-for="gallery in page.galleries"
-        :key="gallery.name"
-        :name="gallery.name"
-        :image="gallery.cover.formats.thumbnail.url"
-        button-text="View gallery"
-        :button-link="{
-          path: `gallery/${gallery.id}`,
-          query: { name: gallery.name },
-        }"
-      />
-    </div>
+    <PageContent>
+      <div class="grid grid-cols-4">
+        <ServiceCard
+          v-for="gallery in page.galleries"
+          :key="gallery.name"
+          :name="gallery.name"
+          :image="gallery.cover.formats.thumbnail.url"
+          button-text="View gallery"
+          :button-link="{
+            path: `gallery/${gallery.id}`,
+            query: { name: gallery.name },
+          }"
+        />
+      </div>
+    </PageContent>
   </div>
 </template>
 

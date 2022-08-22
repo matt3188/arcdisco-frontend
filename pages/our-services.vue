@@ -6,19 +6,21 @@
       :heading="page.banner.heading"
       :content="page.banner.content"
     />
-    <template v-if="Object.keys(page.services).length">
-      <div class="grid grid-cols-4">
-        <ServiceCard
-          v-for="service in page.services"
-          :key="service.name"
-          :name="service.name"
-          :image="service.image && service.image.url"
-          :description="service.description"
-          :button-text="service.button_text"
-          :button-link="service.button_link"
-        />
-      </div>
-    </template>
+    <PageContent>
+      <template v-if="Object.keys(page.services).length">
+        <div class="grid grid-cols-4">
+          <ServiceCard
+            v-for="service in page.services"
+            :key="service.name"
+            :name="service.name"
+            :image="service.image && service.image.url"
+            :description="service.description"
+            :button-text="service.button_text"
+            :button-link="service.button_link"
+          />
+        </div>
+      </template>
+    </PageContent>
   </div>
 </template>
 
