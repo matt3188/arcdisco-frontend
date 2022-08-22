@@ -7,6 +7,13 @@ export const servicesPage = gql`
         attributes {
           header {
             heading
+            banner {
+              data {
+                attributes {
+                  url
+                }
+              }
+            }
           }
           banner {
             heading

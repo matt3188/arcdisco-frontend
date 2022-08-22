@@ -1,7 +1,9 @@
 <template>
   <div v-if="!$apollo.loading" class="prose max-w-none">
-    <HeroBanner :heading="page.header.heading" />
-
+    <HeroBanner
+      :heading="page.header.heading"
+      :banner="page.header.banner.url"
+    />
     <QuoteBanner
       :heading="page.banner.heading"
       :content="page.banner.content"
